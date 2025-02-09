@@ -7,10 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.textanalyser.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class MainActivity extends AppCompatActivity {
+public class  MainActivity extends AppCompatActivity {
 
     BottomNavigationView nav_bar;
     @Override
@@ -25,20 +26,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment = null;
-                switch(item.getItemId()){
-                    case R.id.nav_home:
+
+                    if(item.getItemId() == R.id.nav_home){
                         fragment = new HomeFragment();
-                        break;
-                    case R.id.nav_fav:
+                    }
+
+                    if(item.getItemId() == R.id.nav_fav){
                         fragment = new FavFragment();
-                        break;
-                    case R.id.nav_search:
+                    }
+                    if(item.getItemId() == R.id.nav_search){
                         fragment = new SearchFragment();
-                        break;
-                    case R.id.nav_shop:
+                    }
+                    if(item.getItemId() == R.id.nav_shop){
                         fragment = new ShopFragment();
-                        break;
-                }
+                    }
+
+//                switch(item.getItemId()){
+//                    case R.id.nav_home:
+//                        fragment = new HomeFragment();
+//                        break;
+//                    case R.id.nav_fav:
+//                        fragment = new FavFragment();
+//                        break;
+//                    case R.id.nav_search:
+//                        fragment = new SearchFragment();
+//                        break;
+//                    case R.id.nav_shop:
+//                        fragment = new ShopFragment();
+//                        break;
+//                }
                 getSupportFragmentManager().beginTransaction().replace(R.id.main_container, fragment).commit();
                 return true;
             }

@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import com.example.textanalyser.R;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ShopFragment#newInstance} factory method to
@@ -59,7 +61,7 @@ public class ShopFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_shop, container, false);
 
-        ImageButton git1 = view.findViewById(R.id.git1);
+        ImageButton git1 = view.findViewById(com.example.textanalyser.R.id.git1);
         ImageButton git2 = view.findViewById(R.id.git2);
         ImageButton git3 = view.findViewById(R.id.git3);
         ImageButton link1 = view.findViewById(R.id.link1);

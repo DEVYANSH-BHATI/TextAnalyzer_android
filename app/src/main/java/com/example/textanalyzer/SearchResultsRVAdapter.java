@@ -1,6 +1,6 @@
 package com.example.textanalyzer;
 
-
+import com.example.textanalyser.R;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
